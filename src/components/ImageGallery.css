@@ -1,0 +1,89 @@
+/* Gallery Container */
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #1d1f25; /* Darker background for the gallery */
+  border-radius: 12px; /* Slightly more rounded corners for a smoother look */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6); /* More intense shadow for better depth */
+}
+
+/* Loading Message */
+.loading-message {
+  color: #ff9f00; /* Warm amber color for loading text */
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  padding: 50px;
+  background-color: #272c36; /* Dark background with a bit of blue for the loading container */
+  border-radius: 12px;
+  width: 100%;
+  margin-top: 100px; /* Adds some space from the top */
+  text-transform: uppercase; /* Make the loading message stand out more */
+}
+
+/* Image Card Styling */
+.image-card {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  border-radius: 12px; /* Rounded corners for the image cards */
+  overflow: hidden;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5); /* Darker shadow around the images */
+  background-color: #2e3440; /* Darker shade for image cards */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Added smooth transition */
+}
+
+/* Image Styling */
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Keeps the aspect ratio of images */
+  border-radius: 12px; /* Rounded corners for images */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth zoom effect and fading */
+}
+
+/* Hover Effects on Image Card */
+.image-card:hover {
+  transform: scale(1.05); /* Slight zoom-in effect on hover */
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.7); /* Darker shadow when hovering */
+  background-color: #3b4252; /* Slightly lighter background on hover */
+}
+
+.image-card:hover img {
+  transform: scale(1.1); /* Zoom-in effect on the image */
+  opacity: 0.9; /* Slight fade effect on hover */
+}
+
+/* Responsive design for small screens */
+@media (max-width: 768px) {
+  .gallery-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-card {
+    width: 100%;
+    max-width: 350px; /* Limit max width for smaller screens */
+    height: 250px; /* Adjust height for better display on mobile */
+  }
+
+  .loading-message {
+    margin-top: 50px; /* Adjust loading message margin for smaller screens */
+    font-size: 18px; /* Slightly smaller text on smaller screens */
+  }
+}
+
+/* Fade-in effect for images */
+.image-card img {
+  opacity: 0;
+  animation: fadeIn 1s forwards; /* Apply fade-in effect */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}

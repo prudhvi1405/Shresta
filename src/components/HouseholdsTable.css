@@ -1,0 +1,154 @@
+/* General container settings */
+.container {
+  margin: 20px;
+  font-family: 'Arial', sans-serif;
+  max-width: 100%; /* Ensures container is fluid and adapts to screen size */
+  padding: 20px;
+  box-sizing: border-box; /* Ensures padding does not overflow the container */
+  background-color: #f4f7fc; /* Light background color for the container */
+}
+
+/* Title for the table */
+.table-title {
+  font-size: 26px; /* Slightly larger title for better visibility */
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333333; /* Darker color for improved readability */
+  background-color: #ffffff; /* White background for title */
+  padding: 10px 0; /* Padding for better spacing */
+  border-radius: 8px; /* Rounded corners for title */
+}
+
+/* Table styling */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #e2e8f0; /* Light border for a subtle look */
+  border-radius: 8px; /* Rounded corners for table */
+  background-color: #ffffff; /* White background for table */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
+  overflow: hidden; /* Prevent overflow from rounded corners */
+}
+
+/* Table header styling */
+.table-header {
+  height: 60px; /* Increased height for a more spacious header */
+  text-align: center;
+  background-color: #4b6cb7; /* New background color for header (light blue) */
+  border: 1px solid #ddd;
+  font-weight: bold;
+  color: #ffffff; /* White text for contrast */
+  vertical-align: middle;
+  text-transform: uppercase;
+  padding: 14px; /* Increased padding for better alignment */
+  font-size: 16px; /* Slightly larger font for headers */
+}
+
+/* Table cell styling */
+.table-cell {
+  height: 60px; /* Matches header height */
+  text-align: center;
+  border: 1px solid #ddd;
+  vertical-align: middle;
+  padding: 14px; /* Increased padding for better spacing */
+  font-size: 16px; /* Slightly larger font size */
+  color: #333;
+  background-color: #f9fafb; /* Light background for table cells */
+}
+
+/* Hover effect for rows */
+.table-row:hover {
+  background-color: #f3f4f6; /* Light gray hover effect */
+  cursor: pointer; /* Cursor change to indicate interactivity */
+}
+
+/* Styling for the scrollable table body */
+.scrollable-tbody {
+  display: block;
+  max-height: 400px; /* Increased height for better scroll experience */
+  overflow-y: scroll;
+  width: 100%;
+  border-top: 1px solid #ddd; /* Adds separation between header and body */
+}
+
+/* Ensures the header and body align properly */
+.scrollable-tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+/* Column width consistency */
+.scrollable-tbody td,
+.scrollable-tbody th {
+  width: 120px; /* Slightly wider columns for better content spacing */
+}
+
+/* Styling for table rows inside the scrollable body */
+.scrollable-tbody td {
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 14px; /* Consistent padding with header */
+  font-size: 16px; /* Same font size for consistency */
+  color: #333;
+}
+
+/* Sticky header on scroll (for better UX) */
+thead {
+  position: sticky;
+  top: 0;
+  background-color: #4b6cb7; /* New background color for sticky header */
+  z-index: 10; /* Ensures header stays on top of the scrollable body */
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); /* Shadow under header for separation */
+}
+
+/* Table title styling for each section (if needed for multiple tables) */
+.table-section-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #4a4a4a;
+  padding-left: 20px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .table-header, .table-cell {
+    width: auto; /* Allows table to adapt to screen width */
+    padding: 10px;
+    font-size: 14px; /* Smaller font for better readability on smaller screens */
+  }
+
+  .table-title {
+    font-size: 22px; /* Slightly smaller title for better readability on small screens */
+  }
+
+  .scrollable-tbody {
+    max-height: 350px; /* Slightly reduced max height for small screens */
+    overflow-y: scroll;
+  }
+
+  .table {
+    box-shadow: none; /* Remove shadow on smaller screens for cleaner look */
+  }
+
+  .table-section-title {
+    font-size: 20px; /* Slightly smaller section titles for better spacing */
+  }
+}
+
+@media (max-width: 480px) {
+  .table-header, .table-cell {
+    padding: 8px; /* Reduced padding on very small screens */
+    font-size: 12px; /* Smaller font size for compact tables */
+  }
+
+  .table-title {
+    font-size: 20px; /* Further reduce title size for very small screens */
+  }
+
+  .table-section-title {
+    font-size: 18px; /* Smaller section title for very small screens */
+  }
+}
