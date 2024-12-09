@@ -8,7 +8,7 @@ const Chatbot: React.FC = () => {
         <iframe
           style={styles.iframe}
           allow="microphone;"
-          src="https://console.dialogflow.com/api-client/demo/embedded/1c12e60f-dfa2-4f2e-95c5-cb518d999b09"
+          src="https://console.dialogflow.com/api-client/demo/embedded/6c426689-b59a-49af-a7dd-1174ce362c44"
         />
       </div>
     </div>
